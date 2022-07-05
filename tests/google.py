@@ -8,5 +8,5 @@ def test_q():
 
 def test_search_no_info():
     browser.element('[name="q"]').should(be.blank).type('dsffdfdsf32432').press_enter()
-    browser.element('[id="links"]').should(have.text('По запросу dsffdfdsf32432 результаты не найдено.'))
+    browser.element('p[role="heading"]').should(have.text('По запросу dsffdfdsf32432 ничего не найдено.'))
 
